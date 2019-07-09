@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <LinearLayout
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/Btn_div"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:textColor="#ffffff"
+            android:text="注册"
+            android:id="@+id/register_btn"
+            android:background="@drawable/shape"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:text="登录"
+            android:textColor="#ffffff"
+            android:id="@+id/login_btn"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/shape"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="-35dp"
+        android:layout_below="@+id/Btn_div"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已经阅读同意 "
+            android:textColor="#ffffff" />
+        <TextView
+            android:id="@+id/xieyi_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 珍爱网的服务协议 "
+            android:textColor="#800080" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 和 "
+            android:textColor="#ffffff" />
+        <TextView
+            android:id="@+id/geren_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人信息保护政策"
+            android:textColor="#800080" />
+    </LinearLayout>
+
+</RelativeLayout>

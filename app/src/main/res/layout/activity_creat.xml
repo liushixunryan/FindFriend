@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register.CreatActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/headtoolbat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="#DA70D6">
+
+
+        <ImageView
+            android:onClick="onback"
+            android:src="@drawable/fanhui"
+            android:layout_alignParentLeft="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="创建账号"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/headtoolbat"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/shouji"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <EditText
+                android:id="@+id/username"
+                android:hint="请输入您的用户名"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/shouji"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <EditText
+                android:id="@+id/email"
+                android:hint="请输入您的email"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/shouji"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <EditText
+
+                android:id="@+id/phone"
+                android:hint="请输入您的手机号"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:src="@drawable/mima"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <EditText
+                android:inputType="textPassword"
+                android:hint="请设置登录密码 "
+                android:layout_width="300dp"
+                android:id="@+id/mm"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_marginTop="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:onClick="Intent_creat"
+                android:textColor="#ffffff"
+                android:background="@drawable/shape"
+                android:text="同意协议并注册"
+                android:layout_centerHorizontal="true"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="已阅读和同意 "
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="#800080"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="珍爱网的服务协议 "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="和 "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#800080"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="个人信息保护政策 "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

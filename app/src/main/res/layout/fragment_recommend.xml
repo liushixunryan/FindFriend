@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/headtoolbat"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:background="#DA70D6">
+
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="推荐"
+                    android:textColor="#ffffff"
+                    android:textSize="22dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="200dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/sousuo"
+                    android:src="@drawable/fanhui" />
+
+                <TextView
+                    android:id="@+id/sousuo"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="搜索"
+                    android:textColor="#ffffff"
+                    android:textSize="22dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/slideshow"
+                android:layout_below="@+id/headtoolbat"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v4.view.ViewPager>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/qwe"
+                android:layout_below="@+id/slideshow"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/hibo2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+                    <TextView
+
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="直播"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+
+                        android:layout_gravity="center"
+                        android:src="@drawable/miyu"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+                    <TextView
+
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="蜜语"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/duanshipin"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+                    <TextView
+
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="短视频"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/remendongtai"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+                    <TextView
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="热门动态"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_below="@+id/qwe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ListView
+                    android:id="@+id/jinrituijian_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </ListView>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>
+
