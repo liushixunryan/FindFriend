@@ -36,14 +36,18 @@ import okhttp3.Response;
 public class    CreatActivity extends AppCompatActivity {
     private Intent intent;
     private RequestBody requestBody;
+    private int code;
     private String nian,yue,gender,sheng,height,xl,hun,gz,ri;
     private MediaType JSON= MediaType.get("application/json; charset=utf-8");
     private EditText editText,editText2,editText3,editText4;
+    //判断是否为手机号
+    public static final String PHONE="^((13[0-9])|(15[^4,\\D])|(18[0,2,,5-9])|(17[6]))\\d{8}$";
+    //判断是否为邮箱
+    public static final String EMAIL="\\w+@(\\w+.)+[a-z]{2,3}";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creat);
-
         intent=getIntent();
 
         editText2=findViewById(R.id.mm);
@@ -64,7 +68,7 @@ public class    CreatActivity extends AppCompatActivity {
 //        String gender= intent.getStringExtra("gender");
 //
 
-    //        Toast.makeText(this, , Toast.LENGTH_SHORT).show();
+        //        Toast.makeText(this, , Toast.LENGTH_SHORT).show();
     }
 
 //    @Subscribe(threadMode = ThreadMode.MAIN)
@@ -74,7 +78,9 @@ public class    CreatActivity extends AppCompatActivity {
 
     public void Intent_creat(View view) {
         editText.getText();
-        editText2.getText();
+        Md5Helper.toMD5(editText2.getText().toString());
+        editText3.getText();
+        editText4.getText();
 
         String password=Md5Helper.toMD5(String.valueOf(editText2.getText()));
         JSONObject jsonObject=new JSONObject();
@@ -117,9 +123,62 @@ public class    CreatActivity extends AppCompatActivity {
             @Override
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                 String reposes=response.body().string();
-                Log.i("LoginActivityit520",reposes);
-                Intent intent=new Intent(CreatActivity.this,MainActivity.class);
-                startActivity(intent);
+
+                if (editText.getText().toString().equals("")||editText4.getText().toString().equals("")||editText3.getText().toString().equals("")||editText2.getText().toString().equals("")){
+                    Looper.prepare();
+                    Toast.makeText(CreatActivity.this, "您的数据有空缺", Toast.LENGTH_SHORT).show();
+                    Looper.loop();
+
+//
+                }
+                else {
+                    if (editText4.getText().toString().matches(EMAIL)&&editText3.getText().toString().matches(PHONE)){
+                        Log.i("LoginActivityit520",reposes);
+                        JSONObject jsonObject = null;
+                        try {
+                            jsonObject = new JSONObject(reposes);
+                            code = jsonObject.getInt("code");
+                            switch (code) {
+                                case 0:
+                                    Looper.prepare();
+
+                                    Toast.makeText(CreatActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
+
+                                    Intent intent =new Intent(CreatActivity.this,MainActivity.class);
+                                    startActivity(intent);
+                                    Looper.loop();
+                                    break;
+                                case 1000:
+                                    Looper.prepare();
+                                    Toast.makeText(CreatActivity.this, "此用户名已注册", Toast.LENGTH_SHORT).show();
+                                    Looper.loop();
+                                    break;
+                                case 236:
+                                    Looper.prepare();
+                                    Toast.makeText(CreatActivity.this, "邮箱已被注册", Toast.LENGTH_SHORT).show();
+                                    Looper.loop();
+                                    break;
+                                case 199:
+                                    Looper.prepare();
+                                    Toast.makeText(CreatActivity.this, "手机号码已注册", Toast.LENGTH_SHORT).show();
+                                    Looper.loop();
+                                    break;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+
+                    }
+                    else {
+                        Looper.prepare();
+                        Toast.makeText(CreatActivity.this, "输入的邮箱或者手机号格式不对", Toast.LENGTH_SHORT).show();
+                        Looper.loop();
+                    }
+
+//
+
+                }
             }
         });
 

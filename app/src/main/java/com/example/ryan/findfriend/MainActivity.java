@@ -1,5 +1,6 @@
 package com.example.ryan.findfriend;
 
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 
 import com.example.ryan.findfriend.Fragment.MyFragment;
 import com.example.ryan.findfriend.Fragment.RecommendFragment;
+import com.example.ryan.findfriend.db.Db;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
@@ -27,13 +29,17 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
+    private Fragment Rfragment=new RecommendFragment();
+    private RecommendFragment recommendFragmen;
 
     private ImageView tuijian_img,zhibo_img,dongtai_img,xiaoxi_img,wode_img;
     public static final MediaType JSON=MediaType.parse("application/json; charset=utf-8");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         init();
         //假装已经点击
         tuijian_img.setImageDrawable(getResources().getDrawable(R.drawable.tuijian_select));
@@ -57,11 +63,10 @@ public class MainActivity extends AppCompatActivity {
     public void tuijian(View view) {
         ft();
         tuijian_img.setImageDrawable(getResources().getDrawable(R.drawable.tuijian_select));
-
-        Fragment fragment=new RecommendFragment();
+        Fragment Rfragment=new RecommendFragment();
         FragmentManager manager=MainActivity.this.getSupportFragmentManager();
         android.support.v4.app.FragmentTransaction transaction=manager.beginTransaction();
-        transaction.replace(R.id.lunbo,fragment);
+        transaction.replace(R.id.lunbo,Rfragment);
         transaction.commit();
     }
 

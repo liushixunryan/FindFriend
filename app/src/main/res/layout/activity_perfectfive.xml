@@ -60,7 +60,7 @@
 
         <Button
             android:onClick="Intent_five1"
-            android:text="高中及以下"
+            android:text="中专以下学历"
             android:id="@+id/xl1"
             android:background="@drawable/xueli"
             android:layout_width="350dp"
@@ -81,7 +81,7 @@
             android:layout_height="60dp" />
         <Button
             android:id="@+id/xl4"
-            android:text="大学本科"
+            android:text="本科"
             android:background="@drawable/xueli"
             android:onClick="Intent_five4"
             android:layout_width="350dp"
@@ -98,6 +98,13 @@
             android:id="@+id/xl6"
             android:layout_width="350dp"
             android:onClick="Intent_five6"
+            android:background="@drawable/xueli"
+            android:layout_height="60dp" />
+        <Button
+            android:text="博士后"
+            android:id="@+id/xl7"
+            android:layout_width="350dp"
+            android:onClick="Intent_five7"
             android:background="@drawable/xueli"
             android:layout_height="60dp" />
 

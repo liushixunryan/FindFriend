@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/sousuoo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <EditText
+            android:hint="请输入ID"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/select_btn"
+            android:gravity="center"
+            android:text="搜索"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_below="@+id/sousuoo"
+        android:id="@+id/xiaoshi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_marginLeft="12dp"
+        android:src="@mipmap/tuijian1"
+        android:id="@+id/headphoto_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+
+    <TextView
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:id="@+id/username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/headphoto_img"
+        android:text="可爱Baby" />
+
+
+    <TextView
+
+        android:textSize="15dp"
+        android:id="@+id/city_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/headphoto_img"
+        android:layout_marginTop="34dp"
+        android:text="沈阳" />
+    <TextView
+
+        android:id="@+id/shuxian1"
+        android:textSize="15dp"
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/city_tv"
+        android:layout_marginTop="34dp"
+        android:text="|" />
+
+    <TextView
+        android:id="@+id/age_tv"
+        android:textSize="15dp"
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/shuxian1"
+        android:layout_marginTop="34dp"
+        android:text="22岁" />
+
+    <TextView
+        android:id="@+id/shuxian2"
+        android:textSize="15dp"
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/age_tv"
+        android:layout_marginTop="34dp"
+        android:text="|" />
+
+    <TextView
+        android:id="@+id/education_tv"
+        android:textSize="15dp"
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/shuxian2"
+        android:layout_marginTop="34dp"
+        android:text="大学本科" />
+
+        <TextView
+            android:id="@+id/height_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="75dp"
+            android:layout_toRightOf="@+id/headphoto_img"
+            android:text="165cm" />
+    </RelativeLayout>
+</RelativeLayout>

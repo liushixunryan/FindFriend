@@ -2,11 +2,11 @@ package com.example.ryan.findfriend.pojo;
 
 public class TuiJianData {
     //头像图片
-    private Integer headphoto_img;
+    private String headphoto_img;
     //用户名
     private String username_tv;
     //vip标志
-    private Integer vip_img;
+    private String vip_img;
     //城市
     private String city_tv;
     //年龄
@@ -16,15 +16,15 @@ public class TuiJianData {
     //身高
     private String height_tv;
     //个签图片
-    private Integer geqian_img;
+    private String geqian_img;
     //个性签名
     private String geqian_lv;
 
-    public Integer getHeadphoto_img() {
+    public String getHeadphoto_img() {
         return headphoto_img;
     }
 
-    public void setHeadphoto_img(Integer headphoto_img) {
+    public void setHeadphoto_img(String headphoto_img) {
         this.headphoto_img = headphoto_img;
     }
 
@@ -36,11 +36,11 @@ public class TuiJianData {
         this.username_tv = username_tv;
     }
 
-    public Integer getVip_img() {
+    public String getVip_img() {
         return vip_img;
     }
 
-    public void setVip_img(Integer vip_img) {
+    public void setVip_img(String vip_img) {
         this.vip_img = vip_img;
     }
 
@@ -76,11 +76,11 @@ public class TuiJianData {
         this.height_tv = height_tv;
     }
 
-    public Integer getGeqian_img() {
+    public String getGeqian_img() {
         return geqian_img;
     }
 
-    public void setGeqian_img(Integer geqian_img) {
+    public void setGeqian_img(String geqian_img) {
         this.geqian_img = geqian_img;
     }
 

@@ -4,8 +4,10 @@ package com.example.ryan.findfriend;
  *  此界面完美了
  * */
 
+import android.content.ContentValues;
 import android.content.Intent;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.ryan.findfriend.Util.HttpUtilPost;
 import com.example.ryan.findfriend.Util.Md5Helper;
+import com.example.ryan.findfriend.db.Db;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -96,20 +99,47 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                 //返回的数据
                 String reposes = response.body().string();
-
+                String data=null,username=null,height=null,education=null,avatar=null;
+                int ageyear;
                 Log.i("LoginActivityit520", reposes);
 //                parseJsonWithPull(reposes);
                 JSONObject jsonObject = null;
+                JSONObject jsonObject1=null;
                 try {
-                    jsonObject = new JSONObject(reposes);
-                    code = jsonObject.getInt("code");
+
+
                     switch (code) {
                         case 0:
+                            jsonObject = new JSONObject(reposes);
+                            data=jsonObject.getString("data");
+                            Log.i("LoginActivityit520", data);
+                            code = jsonObject.getInt("code");
+                            jsonObject1=new JSONObject(data);
+                            username=jsonObject1.getString("username");
+                            height=jsonObject1.getString("height");
+                            ageyear=2019-jsonObject1.getInt("ageyear");
+                            education=jsonObject1.getString("education");
+                            avatar=jsonObject1.getString("avatar");
+                            Log.i("LoginActivityit520", username+height+ageyear+education);
+                            Db db = new Db(LoginActivity.this);
+//                            //插入数据
+                            SQLiteDatabase database=db.getReadableDatabase();
+                            database.delete("user",null,null);
+                            ContentValues cv=new ContentValues();
+                            cv.put("height",height);
+                            cv.put("ageyear",ageyear);
+                            cv.put("education",education);
+                            cv.put("username",username);
+                            cv.put("avatar",avatar);
+
+//                            cv.put("uploadfiles",uploadfiles);
+                            database.insert("user",null,cv);
                             Looper.prepare();
 
                             Toast.makeText(LoginActivity.this, "成功登陆", Toast.LENGTH_SHORT).show();
 
                             Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+
                             startActivity(intent);
                             Looper.loop();
                             break;

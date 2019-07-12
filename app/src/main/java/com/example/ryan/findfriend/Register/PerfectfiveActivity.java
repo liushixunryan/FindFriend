@@ -75,4 +75,10 @@ public class PerfectfiveActivity extends AppCompatActivity {
     public void onback(View view) {
         onBackPressed();
     }
+
+    public void Intent_five7(View view) {
+        intent.putExtra("xl","7");
+        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+        startActivity(intent);
+    }
 }

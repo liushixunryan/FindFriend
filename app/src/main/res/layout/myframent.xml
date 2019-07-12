@@ -13,6 +13,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="我"
+
             android:textColor="#fff"
             android:textAlignment="center"
             android:paddingLeft="20dp"
@@ -45,19 +46,22 @@
                 android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="阿涛"/>
+                android:text="阿涛"
+                android:id="@+id/myusername"/>
             <TextView
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="沈阳 | 19 | 大专"/>
+                android:text="沈阳 | 19 | 大专"
+                android:id="@+id/dagex"/>
             <TextView
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="178cm"/>
+                android:text="178cm"
+                android:id="@+id/heightt"/>
             <TextView
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="20dp"

@@ -57,7 +57,7 @@ public class MyFramentAdpater extends ArrayAdapter<my> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         convertView= LayoutInflater.from(this.getContext()).inflate(resource,parent,false);
         ImageView imageView1=convertView.findViewById(R.id.tt1);
         ImageView imageView2=convertView.findViewById(R.id.tt2);
@@ -71,15 +71,45 @@ public class MyFramentAdpater extends ArrayAdapter<my> {
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (textView.getText().toString()){
-                    case "谁看过我":
+                switch (position){
+                    case 0:
                         Toast.makeText(context, "开发中", Toast.LENGTH_SHORT).show();
 //                        Intent intent=new Intent(context, SkgwActivity.class);
 //                        context.startActivity(intent);
                         break;
-                        case "ddd":
+                        case 1:
                             Toast.makeText(context, "sss", Toast.LENGTH_SHORT).show();
                             break;
+                    case 2:
+                        Toast.makeText(context, "2", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 3:
+                        Toast.makeText(context, "2", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 4:
+                        Toast.makeText(context, "2", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 5:
+                        Toast.makeText(context, "2", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 6:
+                        Toast.makeText(context, "2", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 7:
+                        Toast.makeText(context, "2", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 8:
+                        Toast.makeText(context, "2", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 9:
+                        Toast.makeText(context, "2", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 10:
+                        Toast.makeText(context, "2", Toast.LENGTH_SHORT).show();
+                        break;
+
+
                 }
 //                if (textView.getText().equals("谁看过我")){
 //                    Intent intent=new Intent(context, SkgwActivity.class);
