@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     private int code;
 //    private String mobile,username,email;
     //判断是否为手机号
-    public static final String PHONE="^((13[0-9])|(15[^4,\\D])|(18[0,2,,5-9])|(17[6]))\\d{8}$";
+    public static final String PHONE="^((13[0-9])|(15[^4,\\D])|(18[0,2,3,5-9])|(17[6]))\\d{8}$";
     //判断是否为邮箱
     public static final String EMAIL="\\w+@(\\w+.)+[a-z]{2,3}";
 

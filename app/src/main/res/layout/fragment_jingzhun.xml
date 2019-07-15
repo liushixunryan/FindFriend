@@ -8,6 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <EditText
+            android:inputType="number"
+            android:id="@+id/inputID_et"
             android:hint="请输入ID"
             android:layout_weight="5"
             android:layout_width="0dp"
@@ -58,7 +60,6 @@
         android:layout_marginTop="34dp"
         android:text="沈阳" />
     <TextView
-
         android:id="@+id/shuxian1"
         android:textSize="15dp"
         android:layout_marginLeft="3dp"

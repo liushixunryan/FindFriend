@@ -59,12 +59,7 @@ public class RecommendFragment extends Fragment {
     private String wangzhi="http://leszhenai.com/";
     private int EDUTATION;
     private String xueli=null;
-    private TextView sousuo;
-
-    private String City_tv[]={"沈阳","沈阳"};
-    private String Geqian_lv[]={"回眸一笑百媚生","回眸一笑百媚生"};
-    private Integer[] Geqian_img = {R.mipmap.tuijian1,R.mipmap.tuijian21};
-
+    private TextView sousuo;;
     private int countrecord = 10;
     private int nbottomcount = 0;
 

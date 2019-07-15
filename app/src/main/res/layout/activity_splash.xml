@@ -13,7 +13,7 @@
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/splash" />
+        android:src="@drawable/guidepage"/>
 
     <LinearLayout
         android:layout_marginRight="10dp"
@@ -29,7 +29,7 @@
             android:textColor="#ffffff"
             android:text="注册"
             android:id="@+id/register_btn"
-            android:background="@drawable/shape"
+            android:background="@drawable/button"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="50dp" />
@@ -39,43 +39,10 @@
             android:textColor="#ffffff"
             android:id="@+id/login_btn"
             android:layout_marginLeft="12dp"
-            android:background="@drawable/shape"
+            android:background="@drawable/logon_button"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="50dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="-35dp"
-        android:layout_below="@+id/Btn_div"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="已经阅读同意 "
-            android:textColor="#ffffff" />
-        <TextView
-            android:id="@+id/xieyi_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" 珍爱网的服务协议 "
-            android:textColor="#800080" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" 和 "
-            android:textColor="#ffffff" />
-        <TextView
-            android:id="@+id/geren_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="个人信息保护政策"
-            android:textColor="#800080" />
     </LinearLayout>
 
 </RelativeLayout>

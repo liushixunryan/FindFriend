@@ -9,17 +9,18 @@
     <RelativeLayout
         android:id="@+id/headtoolbat"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
-        android:background="#8A2BE2">
+        android:background="@drawable/navigationbar">
 
 
         <ImageView
+            android:layout_marginLeft="30px"
             android:onClick="onback"
             android:src="@drawable/fanhui"
             android:layout_alignParentLeft="true"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_centerVertical="true" />
 
         <TextView
@@ -36,18 +37,11 @@
     <RelativeLayout
         android:id="@+id/tupian"
         android:layout_below="@+id/headtoolbat"
-        android:background="#ff00ff"
+        android:background="@drawable/improvingdata_banner"
         android:layout_width="match_parent"
         android:layout_height="120dp">
 
-        <TextView
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:textSize="30dp"
-            android:text="此处应该有图"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -63,15 +57,15 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="60px"
                 android:textSize="25dp"
-                android:text="请问你的性别是"
+                android:text="你代表的立场是"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:gravity="center"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="60px"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -84,11 +78,11 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/nan_img"
-                        android:src="@drawable/nan"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp" />
+                        android:src="@drawable/sext"
+                        android:layout_width="220px"
+                        android:layout_height="220px" />
                     <TextView
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="50px"
                         android:text="T"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -97,7 +91,7 @@
 
                 <LinearLayout
 
-                    android:layout_marginLeft="50dp"
+                    android:layout_marginLeft="50px"
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:orientation="vertical"
@@ -105,20 +99,24 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/P_img"
-                        android:src="@drawable/nan"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp" />
+                        android:src="@drawable/sexp"
+                        android:layout_width="220px"
+                        android:layout_height="220px" />
                     <TextView
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="50px"
                         android:text="P"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_marginTop="60px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
                 <LinearLayout
                     android:gravity="center"
-                    android:layout_marginLeft="50dp"
                     android:layout_width="wrap_content"
                     android:orientation="vertical"
                     android:onClick="nv"
@@ -126,18 +124,17 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/nv_img"
-                        android:src="@drawable/nv"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp" />
+                        android:src="@drawable/sexh"
+                        android:layout_width="220px"
+                        android:layout_height="220px" />
                     <TextView
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="50px"
                         android:gravity="center"
                         android:text="H"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
     </RelativeLayout>
 

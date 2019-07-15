@@ -11,7 +11,6 @@ import com.example.ryan.findfriend.Register.PerfectoneActivity;
 
 public class SplashActivity extends AppCompatActivity {
     private Button register_btn,login_btn;
-    private TextView xieyi_tv,geren_tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +22,7 @@ public class SplashActivity extends AppCompatActivity {
     private void init() {
         register_btn=findViewById(R.id.register_btn);
         login_btn=findViewById(R.id.login_btn);
-        xieyi_tv=findViewById(R.id.xieyi_tv);
-        geren_tv=findViewById(R.id.geren_tv);
+
     }
 
 
@@ -45,21 +43,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         });
 
-        xieyi_tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(SplashActivity.this,LoginActivity.class);
-                startActivity(intent);
-            }
-        });
 
-        geren_tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(SplashActivity.this,LoginActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
 }

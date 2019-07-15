@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,7 +18,7 @@ import com.lljjcoder.citypickerview.widget.CityPicker;
 public class PerfecttwoActivity extends AppCompatActivity {
     private TextView mContent;
     private Intent intent;
-    private String sheng,gender;
+    private String youbian,gender;
     int code;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,14 +69,14 @@ public class PerfecttwoActivity extends AppCompatActivity {
             public void onSelected(String...   citySelected)   {
                 //省份
                 String province = citySelected[0];
-                sheng=province;
+
                 //城市
                 String city =citySelected[1];
                 //区县（如果设定了两级联动，那么该项返回空）
                 String district = citySelected[2];
                 //邮编
                 String code = citySelected[3];
-
+                youbian=code;
                 //为展示区赋值
                 mContent.setText(province.trim()   +   "-"   +   city.trim()   +   "-"   +   district.trim());
 
@@ -86,11 +87,11 @@ public class PerfecttwoActivity extends AppCompatActivity {
 
     public void xiayibu(View view) {
 //        intent=new Intent(PerfecttwoActivity.this,CreatActivity.class);
-        if (sheng == null){
+        if (youbian == null){
             Toast.makeText(this, "请点击选择地址", Toast.LENGTH_SHORT).show();
         }
         else{
-            intent.putExtra("sheng",sheng);
+            intent.putExtra("sheng",youbian);
             startActivity(intent);
 
         }
